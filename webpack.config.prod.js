@@ -1,9 +1,9 @@
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+import { merge } from 'webpack-merge';
+import common from './webpack.common.js';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
-module.exports = merge(common, {
+export default merge(common, {
   mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({

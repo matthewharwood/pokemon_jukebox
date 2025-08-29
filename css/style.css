@@ -84,6 +84,111 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  background-color: #ccc;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overscroll-behavior: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#piano-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  z-index: 10;
+}
+
+#musical-staff {
+  position: fixed;
+  left: 200px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 200px);
+  height: 100vh;
+  z-index: 5;
+}
+
+.piano-key {
+  position: relative;
+  width: 200px;
+  height: calc(100% / 88);
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-family: monospace;
+  font-size: 11px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.piano-key.white {
+  background: linear-gradient(to right, #ffffff 0%, #f8f8f8 100%);
+  color: #333;
+  z-index: 1;
+}
+
+.piano-key.black {
+  background: linear-gradient(to right, #2a2a2a 0%, #1a1a1a 100%);
+  color: #aaa;
+  width: 140px;
+  margin-left: 0;
+  z-index: 2;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.piano-key:hover {
+  filter: brightness(0.9);
+}
+
+.piano-key:active,
+.piano-key.active {
+  filter: brightness(0.7);
+  transform: translateX(2px);
+}
+
+.piano-key.white:active,
+.piano-key.white.active {
+  background: linear-gradient(to right, #e0e0e0 0%, #d8d8d8 100%);
+}
+
+.piano-key.black:active,
+.piano-key.black.active {
+  background: linear-gradient(to right, #4a4a4a 0%, #3a3a3a 100%);
+}
+
+.key-label {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

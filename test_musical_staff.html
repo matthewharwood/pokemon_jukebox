@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Staff Component Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        pkm-musical-staff {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Musical Staff Component Test</h1>
+        
+        <h2>Treble Clef - C Major Scale</h2>
+        <pkm-musical-staff clef="treble" notes="C4,D4,E4,F4,G4,A4,B4,C5"></pkm-musical-staff>
+        
+        <h2>Bass Clef - C Major Scale</h2>
+        <pkm-musical-staff clef="bass" notes="C3,D3,E3,F3,G3,A3,B3,C4"></pkm-musical-staff>
+        
+        <h2>Treble Clef - High Notes</h2>
+        <pkm-musical-staff clef="treble" notes="G5,A5,B5,C6"></pkm-musical-staff>
+        
+        <h2>Bass Clef - Low Notes</h2>
+        <pkm-musical-staff clef="bass" notes="G3,F3,E3,D3,C3"></pkm-musical-staff>
+    </div>
+
+    <script type="module">
+        import PkmMusicalStaff from './js/components/pkm_musical_staff.js';
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:animejs.com)",
+      "WebSearch",
+      "WebFetch(domain:pokemondb.net)",
+      "Bash(npm install)",
+      "Bash(curl:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm start)",
+      "Bash(dir:*)",
+      "Bash(del \"C:\\Users\\Matt\\Documents\\GitHub\\pokemon_jukebox\\img\\bass_clef.png\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
